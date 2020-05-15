@@ -1,0 +1,45 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  height: 100vh;
+}
+
+.dropDown {
+  position: absolute;
+}
+
+.dropDown .dropDown-btn {
+  padding: 15px;
+  background-color: #F44334;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+.dropDown:hover .dropDown-container {
+  display: block;
+}
+
+.dropDown .dropDown-container {
+  display: none;
+}
+
+.dropDown .dropDown-container .dropDown-itens {
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.4);
+  width: 200px;
+}
+
+.dropDown .dropDown-container .dropDown-itens:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/*# sourceMappingURL=style.css.map */

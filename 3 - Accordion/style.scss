@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.accordion-container{
+    margin: 10px;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+}
+.accordion-btn{
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: grey;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(black, $alpha: 0.4);
+    }
+    
+}
+
+.painel p{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s linear;
+    
+}
+
+.painel:target p{
+    max-height: 900px;
+    padding: 20px;
+}
+
+
+

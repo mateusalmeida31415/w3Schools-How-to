@@ -1,0 +1,70 @@
+@mixin flexBox($direction:row, $justify:center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.showup-form{
+    padding: 20px;
+    background-color: green;
+    //display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    display: none; // Retirar depois
+}
+
+.container{
+    @include flexBox(column);
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: 0.7);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    .login-image img{
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+    }
+    form{
+        //@include flexBox(column);
+        //width: 100%;
+        input[id=username], 
+        input[id=password], 
+        input[id=submit]{
+            width: 100%;
+            margin: 8px 10px;
+            border: 1px solid rgba(grey, 0.5);
+            padding: 10px;
+            border-radius: 3px;
+        }
+        & > label{
+            align-self: start;
+            margin: 2px 5px;
+        }
+        .login-remember{
+            @include flexBox(row, flex-start);
+            width: 100%;
+            margin: 0 0 5px 5px;
+        }
+    }
+    .login-foot{
+        @include flexBox(row, space-between);
+        height: 40px;
+        width: 100%;
+        margin: 0px 5px 5px 5px;
+    }
+}
