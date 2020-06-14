@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.container{
+    background-color: #EEEEEE;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    width: 200px;
+    border-radius: 4px;
+    .container-block{
+        .container-block-itens{
+            text-align: center;
+            padding: 20px;
+            .container-block-itens-link{
+                color: rgba(#2296F3, 0.6);
+                font-size: 25pt;
+                transition: color 0.5s linear;
+            }
+            &:hover a{
+                color: rgba(#2296F3, 1.0);
+            }
+        }
+    }
+}
+
+main{
+    margin: 20px 20px 0 230px;
+    font-size: 20px;
+    p, h1{
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+}
