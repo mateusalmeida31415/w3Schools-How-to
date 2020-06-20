@@ -1,0 +1,50 @@
+@mixin displayFlex() {
+    display: flex;
+    align-items: center;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+.navegation{
+    &-container{
+        @include displayFlex();
+        height: 100%;
+        background-color:#F1F1F1;
+        margin-bottom: 20px;
+        &-itens{
+            padding: 20px;
+            &-link{
+                color: black;
+                font-size: 25px;
+            }
+            &:hover{
+                background-color: rgba(black, 0.4);
+            }
+            &:active{
+                background-color: #ccc;
+            }
+        }
+    }
+    .content{
+        margin-left: 20px;
+        .content-title{
+            margin-bottom: 20px;
+        }
+    }
+}
+
